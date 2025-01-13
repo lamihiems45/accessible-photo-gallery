@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessible Photo Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Accessible Photo Gallery</h1>
+    </header>
+
+    <section class="gallery">
+        <article class="photo" tabindex="0" aria-label="Image 1 - A beautiful sunset over the beach">
+            <img src="image1.jpg" alt="A beautiful sunset over the beach" />
+        </article>
+        <article class="photo" tabindex="0" aria-label="Image 2 - A mountain landscape at dawn">
+            <img src="image2.jpg" alt="A mountain landscape at dawn" />
+        </article>
+        <article class="photo" tabindex="0" aria-label="Image 3 - A cityscape at night with bright lights">
+            <img src="image3.jpg" alt="A cityscape at night with bright lights" />
+        </article>
+        <!-- Add more images as necessary -->
+    </section>
+
+    <!-- Modal for viewing images -->
+    <div id="myModal" class="modal" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+        <button class="close" aria-label="Close" title="Close Modal">&times;</button>
+        <img class="modal-content" id="modalImage" alt="Large view of image">
+        <figcaption id="modalLabel" class="modal-caption">Image description</figcaption>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
